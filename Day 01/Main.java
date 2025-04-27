@@ -49,5 +49,22 @@ public class Main {
 
     LocalDate date = LocalDate.now();
     System.out.println(date.getMonthValue());
-    }    
+
+    Person alex = new Person("Alex");
+    Person mariam = alex;
+    System.out.println(alex.name  + " " + mariam.name);
+    mariam.name = "Vaishnav";
+    System.out.println(alex.name  + " " + mariam.name);
+
+
+
+    }
+
+    static class Person{
+        String name;
+
+        Person(String name){
+            this.name = name;
+        }
+    }
 }
