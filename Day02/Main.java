@@ -112,6 +112,24 @@ public class Main {
         System.out.println("Is five less than or equal to eight? " + (five<=eight));
 
 
+        // Logical Operators
+        boolean isTrue = true;
+        boolean isFalse = false;
+
+        // Logical AND (&&) - true if both conditions are true
+        System.out.println("Logical AND (true && false): " + (isTrue && isFalse)); // false
+
+        // Logical OR (||) - true if at least one condition is true
+        System.out.println("Logical OR (true || false): " + (isTrue || isFalse)); // true
+
+        // Logical NOT (!) - inverts the boolean value
+        System.out.println("Logical NOT (!true): " + (!isTrue)); // false
+
+        // Combining logical operators
+        boolean result = (5 > 3) && (8 > 5); // true && true
+        System.out.println("Combining Logical Operators ((5 > 3) && (8 > 5)): " + result); // true
+
+
         // Math Class
         // Find the maximum of two numbers
         int max = Math.max(ten, two);
