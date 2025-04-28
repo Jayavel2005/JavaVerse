@@ -183,3 +183,120 @@ int[] arr = new int[5];        // 'arr' holds a reference in stack, array of int
 +-----------------+            +------------------------+
 ```
 
+## Strings in Java
+
+A `String` in Java is a sequence of characters. Strings are immutable, meaning their values cannot be changed once created. They are widely used for storing and manipulating text.
+
+### Creating Strings
+
+1. Using string literals:
+    ```java
+    String greeting = "Hello, World!";
+    ```
+
+2. Using the `new` keyword:
+    ```java
+    String message = new String("Welcome to Java!");
+    ```
+
+---
+
+### Examples of Strings
+
+1. Concatenating strings:
+    ```java
+    String firstName = "John";
+    String lastName = "Doe";
+    String fullName = firstName + " " + lastName;
+    System.out.println(fullName); // Output: John Doe
+    ```
+
+2. Comparing strings:
+    ```java
+    String str1 = "Java";
+    String str2 = "Java";
+    System.out.println(str1.equals(str2)); // Output: true
+    ```
+
+3. String immutability:
+    ```java
+    String original = "Hello";
+    String modified = original.concat(", World!");
+    System.out.println(original);  // Output: Hello
+    System.out.println(modified);  // Output: Hello, World!
+    ```
+
+---
+
+### Most Useful String Functions
+
+1. **`length()`**: Returns the length of the string.
+    ```java
+    String text = "Java";
+    System.out.println(text.length()); // Output: 4
+    ```
+
+2. **`charAt(int index)`**: Returns the character at the specified index.
+    ```java
+    String text = "Java";
+    System.out.println(text.charAt(2)); // Output: v
+    ```
+
+3. **`substring(int beginIndex, int endIndex)`**: Extracts a portion of the string.
+    ```java
+    String text = "Java Programming";
+    System.out.println(text.substring(0, 4)); // Output: Java
+    ```
+
+4. **`toUpperCase()` and `toLowerCase()`**: Converts the string to uppercase or lowercase.
+    ```java
+    String text = "Java";
+    System.out.println(text.toUpperCase()); // Output: JAVA
+    System.out.println(text.toLowerCase()); // Output: java
+    ```
+
+5. **`trim()`**: Removes leading and trailing spaces.
+    ```java
+    String text = "  Java  ";
+    System.out.println(text.trim()); // Output: Java
+    ```
+
+6. **`replace(char oldChar, char newChar)`**: Replaces occurrences of a character.
+    ```java
+    String text = "Java";
+    System.out.println(text.replace('a', 'o')); // Output: Jovo
+    ```
+
+7. **`contains(CharSequence sequence)`**: Checks if the string contains a sequence of characters.
+    ```java
+    String text = "Java Programming";
+    System.out.println(text.contains("Program")); // Output: true
+    ```
+
+8. **`split(String regex)`**: Splits the string into an array based on a delimiter.
+    ```java
+    String text = "Java,Python,C++";
+    String[] languages = text.split(",");
+    for (String lang : languages) {
+        System.out.println(lang);
+    }
+    // Output:
+    // Java
+    // Python
+    // C++
+    ```
+
+9. **`equals(String anotherString)`**: Compares two strings for equality.
+    ```java
+    String str1 = "Java";
+    String str2 = "java";
+    System.out.println(str1.equals(str2)); // Output: false
+    ```
+
+10. **`isEmpty()`**: Checks if the string is empty.
+    ```java
+    String text = "";
+    System.out.println(text.isEmpty()); // Output: true
+    ```
+
+---
