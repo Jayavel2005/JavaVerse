@@ -784,3 +784,108 @@ The `Math` class in Java provides methods for performing mathematical operations
 
 --- 
 These operators, conditional statements, and the `Math` class are essential tools for solving problems in Java programming.
+
+
+## Arrays and Indexes in Java
+
+An **array** is a collection of elements of the same type, stored in a contiguous block of memory. Arrays are used to store multiple values in a single variable.
+
+### Declaring and Initializing an Array
+
+1. **Declaration**: Specify the type of elements and use square brackets `[]`.
+    ```java
+    int[] numbers;
+    ```
+
+2. **Initialization**: Allocate memory and assign values.
+    ```java
+    numbers = new int[5]; // Array of size 5
+    ```
+
+3. **Combined Declaration and Initialization**:
+    ```java
+    int[] numbers = {10, 20, 30, 40, 50};
+    ```
+
+---
+
+### Accessing Array Elements
+
+Array elements are accessed using **indexes**. Indexes in Java start from `0`.
+
+#### Example:
+```java
+int[] numbers = {10, 20, 30, 40, 50};
+
+// Accessing elements
+System.out.println(numbers[0]); // Output: 10
+System.out.println(numbers[2]); // Output: 30
+System.out.println(numbers[4]); // Output: 50
+```
+
+---
+
+### Modifying Array Elements
+
+You can update the value of an element by assigning a new value to its index.
+
+#### Example:
+```java
+int[] numbers = {10, 20, 30, 40, 50};
+
+// Modifying elements
+numbers[1] = 25; // Update the second element
+System.out.println(numbers[1]); // Output: 25
+```
+
+---
+
+### Array Length
+
+The `length` property gives the total number of elements in the array.
+
+#### Example:
+```java
+int[] numbers = {10, 20, 30, 40, 50};
+System.out.println(numbers.length); // Output: 5
+```
+
+---
+
+### Common Mistakes
+
+1. **Accessing Out-of-Bounds Index**:
+    ```java
+    int[] numbers = {10, 20, 30};
+    System.out.println(numbers[3]); // Error: Index 3 is out of bounds
+    ```
+
+2. **Using Negative Index**:
+    ```java
+    int[] numbers = {10, 20, 30};
+    System.out.println(numbers[-1]); // Error: Negative index is not allowed
+    ```
+
+---
+
+### Example: Storing and Accessing Names
+```java
+String[] names = {"Alice", "Bob", "Charlie"};
+
+// Accessing names
+System.out.println(names[0]); // Output: Alice
+System.out.println(names[2]); // Output: Charlie
+
+// Modifying a name
+names[1] = "David";
+System.out.println(names[1]); // Output: David
+```
+
+---
+
+### Key Points to Remember
+1. Arrays are **fixed in size** once created.
+2. Indexes start from `0` and go up to `length - 1`.
+3. Use the `length` property to avoid accessing out-of-bounds indexes.
+
+Arrays are a fundamental concept in Java and are widely used for storing and managing collections of data.
