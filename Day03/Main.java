@@ -46,6 +46,21 @@ public class Main {
             System.out.println(num);
         }
 
+        String [] personNames = {"Anna","Ali", "Bob", "Alice" };
+        for (String name : personNames) {
+            if (name.equals("Bob")) {
+                break;                  // This will break the loop if name is equal to Bob
+            }
+            System.out.print(name + " ");  // This print statement will print the values **OUTPUT* -> Anna Ali
+        }
+        System.out.println();
+        for (String name : personNames) {
+            if (name.equals("Bob")) {
+                continue;                  // This will skip the iteration  if name is equal to Bob
+            }
+            System.out.print(name + " ");  // This print statement will print the values **OUTPUT* -> Anna Ali Alice
+        }
+
 
     }
 }
