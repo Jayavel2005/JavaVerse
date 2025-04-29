@@ -26,6 +26,25 @@ public class Main {
         int[] nums = {1,2,3,4};
         System.out.println(Arrays.toString(names));
 
+        // Accessing and modifying array elements using indexes
+        nums[0] = 10; // Changing the first element to 10
+        System.out.println("Updated nums array: " + Arrays.toString(nums));
+
+        // Accessing elements by index
+        System.out.println("First element in nums: " + nums[0]);
+        System.out.println("Second element in nums: " + nums[1]);
+
+        // Iterating through the array using a for loop
+        System.out.println("Iterating through nums array:");
+        for (int i = 0; i < nums.length; i++) {
+            System.out.println("Element at index " + i + ": " + nums[i]);
+        }
+
+        // Iterating through the array using a for-each loop
+        System.out.println("Iterating through nums array using for-each loop:");
+        for (int num : nums) {
+            System.out.println(num);
+        }
 
 
     }
