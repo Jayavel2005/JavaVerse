@@ -889,3 +889,377 @@ System.out.println(names[1]); // Output: David
 3. Use the `length` property to avoid accessing out-of-bounds indexes.
 
 Arrays are a fundamental concept in Java and are widely used for storing and managing collections of data.
+
+
+## Natural `for` Loop in Java
+
+The `for` loop is one of the most commonly used control structures in Java. It is used to execute a block of code repeatedly for a fixed number of iterations.
+
+### Syntax of a `for` Loop
+```java
+for (initialization; condition; update) {
+    // Code to be executed
+}
+```
+
+### Components of a `for` Loop
+1. **Initialization**: This is executed once at the beginning of the loop. It is used to initialize the loop control variable.
+2. **Condition**: This is evaluated before each iteration. If the condition is `true`, the loop body is executed. If `false`, the loop terminates.
+3. **Update**: This is executed after each iteration. It is typically used to modify the loop control variable.
+
+---
+
+### Example: Printing Numbers from 1 to 10
+```java
+public class NaturalForLoopExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+#### Output:
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+---
+
+### Example: Calculating the Sum of the First 10 Natural Numbers
+```java
+public class SumOfNaturalNumbers {
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 1; i <= 10; i++) {
+            sum += i; // Add the current number to the sum
+        }
+        System.out.println("The sum of the first 10 natural numbers is: " + sum);
+    }
+}
+```
+
+#### Output:
+```
+The sum of the first 10 natural numbers is: 55
+```
+
+---
+
+### Example: Iterating Over an Array
+```java
+public class ArrayIteration {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element at index " + i + ": " + numbers[i]);
+        }
+    }
+}
+```
+
+#### Output:
+```
+Element at index 0: 10
+Element at index 1: 20
+Element at index 2: 30
+Element at index 3: 40
+Element at index 4: 50
+```
+
+---
+
+### Nested `for` Loops
+A `for` loop can be nested inside another `for` loop to handle multi-dimensional data or perform complex iterations.
+
+#### Example: Printing a Multiplication Table
+```java
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                System.out.print(i * j + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+#### Output:
+```
+1	2	3	4	5	
+2	4	6	8	10	
+3	6	9	12	15	
+4	8	12	16	20	
+5	10	15	20	25
+```
+
+---
+
+### Infinite `for` Loop
+If the condition in a `for` loop is omitted or always evaluates to `true`, the loop will run indefinitely.
+
+#### Example:
+```java
+public class InfiniteLoop {
+    public static void main(String[] args) {
+        for (;;) { // No initialization, condition, or update
+            System.out.println("This is an infinite loop.");
+        }
+    }
+}
+```
+
+> **Note**: Use infinite loops cautiously and ensure there is a way to break out of them.
+
+---
+
+### Enhanced `for` Loop (for-each Loop)
+Java also provides an enhanced `for` loop, which is specifically designed for iterating over arrays or collections.
+
+#### Example: Iterating Over an Array Using for-each
+```java
+public class ForEachExample {
+    public static void main(String[] args) {
+        String[] fruits = {"Apple", "Banana", "Cherry"};
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
+```
+
+#### Output:
+```
+Apple
+Banana
+Cherry
+```
+
+---
+
+### Key Points to Remember
+1. The `for` loop is ideal when the number of iterations is known beforehand.
+2. Avoid modifying the loop control variable inside the loop body to prevent unexpected behavior.
+3. Use the enhanced `for` loop for simpler and more readable code when working with arrays or collections.
+
+The `for` loop is a powerful tool in Java that allows developers to write concise and efficient code for repetitive tasks.
+
+## While Loops and Do-While Loops in Java
+
+### While Loop
+The `while` loop is used to execute a block of code repeatedly as long as the given condition is `true`.
+
+#### Syntax:
+```java
+while (condition) {
+    // Code to execute
+}
+```
+
+#### Example: Printing Numbers from 1 to 5
+```java
+public class WhileExample {
+    public static void main(String[] args) {
+        int i = 1;
+        while (i <= 5) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+```
+
+#### Output:
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+### Do-While Loop
+The `do-while` loop is similar to the `while` loop, but it guarantees that the code block will execute at least once, even if the condition is `false`.
+
+#### Syntax:
+```java
+do {
+    // Code to execute
+} while (condition);
+```
+
+#### Example: Printing Numbers from 1 to 5
+```java
+public class DoWhileExample {
+    public static void main(String[] args) {
+        int i = 1;
+        do {
+            System.out.println(i);
+            i++;
+        } while (i <= 5);
+    }
+}
+```
+
+#### Output:
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+### Key Differences Between `while` and `do-while`
+| Feature               | `while` Loop                     | `do-while` Loop                  |
+|-----------------------|-----------------------------------|-----------------------------------|
+| **Execution**         | Executes only if the condition is `true`. | Executes at least once, even if the condition is `false`. |
+| **Use Case**          | Use when the condition needs to be checked before execution. | Use when the code must execute at least once. |
+
+---
+
+## Taking User Input in Java
+
+Java provides the `Scanner` class to take input from the user. It is part of the `java.util` package.
+
+### Importing the Scanner Class
+To use the `Scanner` class, you need to import it:
+```java
+import java.util.Scanner;
+```
+
+---
+
+### Example: Taking an Integer Input
+```java
+import java.util.Scanner;
+
+public class UserInputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        System.out.println("You entered: " + number);
+    }
+}
+```
+
+#### Output:
+```
+Enter a number: 42
+You entered: 42
+```
+
+---
+
+### Example: Taking a String Input
+```java
+import java.util.Scanner;
+
+public class StringInputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Hello, " + name + "!");
+    }
+}
+```
+
+#### Output:
+```
+Enter your name: Alice
+Hello, Alice!
+```
+
+---
+
+### Example: Using a While Loop to Take Multiple Inputs
+```java
+import java.util.Scanner;
+
+public class MultipleInputsExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input;
+
+        System.out.println("Enter words (type 'exit' to stop):");
+        while (true) {
+            input = scanner.nextLine();
+            if (input.equalsIgnoreCase("exit")) {
+                break;
+            }
+            System.out.println("You entered: " + input);
+        }
+    }
+}
+```
+
+#### Output:
+```
+Enter words (type 'exit' to stop):
+Hello
+You entered: Hello
+Java
+You entered: Java
+exit
+```
+
+---
+
+### Example: Using a Do-While Loop to Validate Input
+```java
+import java.util.Scanner;
+
+public class DoWhileInputExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number;
+
+        do {
+            System.out.print("Enter a positive number: ");
+            number = scanner.nextInt();
+        } while (number <= 0);
+
+        System.out.println("You entered: " + number);
+    }
+}
+```
+
+#### Output:
+```
+Enter a positive number: -5
+Enter a positive number: 0
+Enter a positive number: 10
+You entered: 10
+```
+
+---
+
+### Key Points to Remember
+1. Use the `while` loop when the condition needs to be checked before execution.
+2. Use the `do-while` loop when the code must execute at least once.
+3. Use the `Scanner` class to take user input for various data types like `int`, `double`, `String`, etc.
+4. Always close the `Scanner` object using `scanner.close()` to release resources.
+
+These loops and input methods are essential for creating interactive Java programs.
